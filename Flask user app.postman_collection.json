@@ -1,0 +1,576 @@
+{
+  "info": {
+    "_postman_id": "0d80b8d9-1f73-4bb4-b735-df5c42c13605",
+    "name": "Flask user app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58892912",
+    "_collection_link": "https://go.postman.co/collection/58892912-0d80b8d9-1f73-4bb4-b735-df5c42c13605?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get all users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get all users",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.0.6 Python/3.8.0"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 10:37:26 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "270"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"address\": \"John Doe Street, Innsbruck\",\n    \"country\": \"Austria\",\n    \"email\": \"johndoe@gmail.com\",\n    \"name\": \"John Doe\",\n    \"phone\": \"067765434567\",\n    \"user_id\": 1\n  },\n  {\n    \"address\": \"Mazraa Street, Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"jad@gmail.com\",\n    \"name\": \"Jad Tannir\",\n    \"phone\": \"123\",\n    \"user_id\": 2\n  }\n]"
+        },
+        {
+          "name": "Get all users",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.0.6 Python/3.8.0"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 11:03:09 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "403"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"address\": \"New Street, Innsbruck\",\n    \"country\": \"Austria\",\n    \"email\": \"johndoeupdated@gmail.com\",\n    \"name\": \"John Doe Updated\",\n    \"phone\": \"067765434567\",\n    \"user_id\": 1\n  },\n  {\n    \"address\": \"Mazraa Street, Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"jad@gmail.com\",\n    \"name\": \"Jad Tannir\",\n    \"phone\": \"123\",\n    \"user_id\": 2\n  },\n  {\n    \"address\": \"Mazraa Street, Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"Omar@gmail.com\",\n    \"name\": \"Omar \",\n    \"phone\": \"1234\",\n    \"user_id\": 3\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Add user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\n     \"name\": \"Omar \",\n     \"email\": \"Omar@gmail.com\",\n     \"phone\": \"1234\",\n     \"address\": \"Mazraa Street, Beirut\",\n     \"country\": \"Lebanon\"\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/add",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "add"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "   {\n     \"name\": \"John Doe\",\n     \"email\": \"johndoe@gmail.com\",\n     \"phone\": \"067765434567\",\n     \"address\": \"John Doe Street, Innsbruck\",\n     \"country\": \"Austria\"\n   }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "add"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.0.6 Python/3.8.0"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 10:24:02 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "142"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"address\": \"John Doe Street, Innsbruck\",\n  \"country\": \"Austria\",\n  \"email\": \"johndoe@gmail.com\",\n  \"name\": \"John Doe\",\n  \"phone\": \"067765434567\",\n  \"user_id\": 1\n}"
+        },
+        {
+          "name": "Add user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "   {\n     \"name\": \"Jad Tannir\",\n     \"email\": \"jad@gmail.com\",\n     \"phone\": \"123\",\n     \"address\": \"Mazraa Street, Beirut\",\n     \"country\": \"Lebanon\"\n   }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "add"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.0.6 Python/3.8.0"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 10:37:15 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "126"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"address\": \"Mazraa Street, Beirut\",\n  \"country\": \"Lebanon\",\n  \"email\": \"jad@gmail.com\",\n  \"name\": \"Jad Tannir\",\n  \"phone\": \"123\",\n  \"user_id\": 2\n}"
+        },
+        {
+          "name": "Add user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "   {\n     \"name\": \"Omar \",\n     \"email\": \"Omar@gmail.com\",\n     \"phone\": \"1234\",\n     \"address\": \"Mazraa Street, Beirut\",\n     \"country\": \"Lebanon\"\n   }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "add"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.0.6 Python/3.8.0"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 10:51:26 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "123"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"address\": \"Mazraa Street, Beirut\",\n  \"country\": \"Lebanon\",\n  \"email\": \"Omar@gmail.com\",\n  \"name\": \"Omar \",\n  \"phone\": \"1234\",\n  \"user_id\": 3\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get_user_by_id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/2",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get_user_by_id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.0.6 Python/3.8.0"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 10:46:04 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "126"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"address\": \"Mazraa Street, Beirut\",\n  \"country\": \"Lebanon\",\n  \"email\": \"jad@gmail.com\",\n  \"name\": \"Jad Tannir\",\n  \"phone\": \"123\",\n  \"user_id\": 2\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update a user record",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"user_id\": 1,\r\n     \"name\": \"John Doe Updated\",\r\n     \"email\": \"johndoeupdated@gmail.com\",\r\n     \"phone\": \"067765434567\",\r\n     \"address\": \"New Street, Innsbruck\",\r\n     \"country\": \"Austria\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/update",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "update"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update a user record",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "   {\r\n     \"user_id\": 1,\r\n     \"name\": \"John Doe Updated\",\r\n     \"email\": \"johndoeupdated@gmail.com\",\r\n     \"phone\": \"067765434567\",\r\n     \"address\": \"New Street, Innsbruck\",\r\n     \"country\": \"Austria\"\r\n   }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/update",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "update"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.0.6 Python/3.8.0"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 11:00:00 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "152"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"address\": \"New Street, Innsbruck\",\n  \"country\": \"Austria\",\n  \"email\": \"johndoeupdated@gmail.com\",\n  \"name\": \"John Doe Updated\",\n  \"phone\": \"067765434567\",\n  \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete a user record",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/delete/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "delete",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete a user record",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users/delete/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "delete",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.0.6 Python/3.8.0"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 11:06:37 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "39"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"status\": \"User deleted successfully\"\n}"
+        }
+      ]
+    }
+  ]
+}

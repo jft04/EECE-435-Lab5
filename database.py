@@ -36,8 +36,9 @@ def insert_user(user):
                     user['country']) )
         conn.commit()
         inserted_user = get_user_by_id(cur.lastrowid)
-    except:
-        conn().rollback()
+    except Exception as e:
+        print("insert_user error:", e)
+        conn.rollback()
 
     finally:
         conn.close()
